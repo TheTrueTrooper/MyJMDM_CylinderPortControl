@@ -1,0 +1,6 @@
+C:\Users\Angelo's Tower PC\source\repos\MyJMDM_CylinderPortControl\MyJMDM_CylinderPortControl\bin\Debug\MyJMDM_CylinderPortControl.dll
+C:\Users\Angelo's Tower PC\source\repos\MyJMDM_CylinderPortControl\MyJMDM_CylinderPortControl\bin\Debug\MyJMDM_CylinderPortControl.pdb
+C:\Users\Angelo's Tower PC\source\repos\MyJMDM_CylinderPortControl\MyJMDM_CylinderPortControl\obj\Debug\MyJMDM_CylinderPortControl_Updated.csprojAssemblyReference.cache
+C:\Users\Angelo's Tower PC\source\repos\MyJMDM_CylinderPortControl\MyJMDM_CylinderPortControl\obj\Debug\MyJMDM_CylinderPortControl_Updated.csproj.CoreCompileInputs.cache
+C:\Users\Angelo's Tower PC\source\repos\MyJMDM_CylinderPortControl\MyJMDM_CylinderPortControl\obj\Debug\MyJMDM_CylinderPortControl.dll
+C:\Users\Angelo's Tower PC\source\repos\MyJMDM_CylinderPortControl\MyJMDM_CylinderPortControl\obj\Debug\MyJMDM_CylinderPortControl.pdb

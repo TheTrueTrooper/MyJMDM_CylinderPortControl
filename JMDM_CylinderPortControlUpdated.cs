@@ -9,15 +9,18 @@ namespace MyJMDM_CylinderPortControl
 {
     public class JMDM_CylinderPortControlUpdated : IDisposable
     {
-        byte[] DefaultHeight = new byte[] { 0, 0, 0, 0, 0, 0 };
-
         private SerialPort sp_send { set; get; }
 
         public string send_port { private set; get; }
 
         public int CylinderCount { private set; get; }
 
-        public JMDM_CylinderPortControlUpdated(string sendport, int CylinderCount = 6)
+        public bool IsOpen
+        {
+            get => sp_send.IsOpen;
+        }
+
+        public JMDM_CylinderPortControlUpdated(string sendport, int CylinderCount)
         {
             send_port = sendport;
             sp_send = new SerialPort(send_port, 9600, Parity.None, 8, StopBits.One);
@@ -32,6 +35,7 @@ namespace MyJMDM_CylinderPortControl
                 sp_send.Open();
             }
         }
+        
 
         //num  1-6   height  10-250    3个缸的行程控制
         //num 1-6 height 10-250 3 cylinder stroke control
@@ -44,20 +48,6 @@ namespace MyJMDM_CylinderPortControl
             }
             else
                 throw new Exception("Port is not open");
-        }
-
-        public void SetAllCylinders(byte?[] Heights)
-        {
-            for (int i = 0; i < Heights.Length; i++)
-            {
-                if (sp_send.IsOpen)
-                {
-                    if (Heights[i] != null)
-                        sp_send.Write(string.Format("OC({0},{1:D3})", i, Heights[i]));
-                }
-                else
-                    throw new Exception("Port is not open");
-            }
         }
 
         public void ZeroAllCylinders()
